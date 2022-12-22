@@ -1,6 +1,5 @@
 import os
 from flask import Flask, request, send_from_directory, render_template,Response
-
 from flask_cors import CORS, cross_origin
 from google.cloud import storage
 
