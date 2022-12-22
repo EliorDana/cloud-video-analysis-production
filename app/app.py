@@ -1,5 +1,5 @@
 import os
-from flask import Flask, abort, request, send_from_directory, jsonify, render_template, redirect, make_response, url_for, Response
+from flask import Flask, request, send_from_directory, render_template,Response
 
 from flask_cors import CORS, cross_origin
 from google.cloud import storage
@@ -30,7 +30,6 @@ def get_json():
             print("File downloaded")
             json_file = send_from_directory(execution_path, f"{data}")
             os.remove(data)
-            
             print("File sent")
             return json_file
 
